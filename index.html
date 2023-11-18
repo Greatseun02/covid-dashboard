@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" crossorigin src="/assets/index-05383ec7.js"></script>
+    <link rel="stylesheet" href="/assets/index-d748d408.css">
+  </head>
+  <body>
+    <!-- Add your HTML code here -->
+    <div id="app">
+      <h3 class="title">Covid Data</h3>
+      <div class="filter">
+        <div>
+          <input class="select-country" name="country" placeholder="Country"/>
+        </div>
+        <div class="select-year">
+          <label for="year">Select a year</label>
+          <select id="year">
+            <option value="">--</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+          </select>
+        </div>
+        
+        <div class="select-month">
+          <label for="month">Select a month</label>
+          <select id="month">
+            <option value="">--</option>
+            <option value="-01">January</option>
+            <option value="-02">February</option>
+            <option value="-03">March</option>
+            <option value="-04">April</option>
+            <option value="-05">May</option>
+            <option value="-06">June</option>
+            <option value="-07">July</option>
+            <option value="-08">August</option>
+            <option value="-09">September</option>
+            <option value="-10">October</option>
+            <option value="-11">November</option>
+            <option value="-12">December</option>
+          </select>
+        </div>
+        <div>
+          <label for="orderBy">Order By:</label>
+          <select id="orderBy">
+            <option value="">--</option>
+            <option value="cases">Cases</option>
+            <option value="deaths">Deaths</option>
+            <option value="recoveries">Recoveries</option>
+          </select>
+          <button class="submit">Submit</button>
+        </div>
+        <div>
+          <button class="plot">Plot Graph</button>
+        </div>
+      </div>
+      
+      <div class="data">
+        <div class="header">
+          <p class="country">Country</p>
+          <p class="others">Time</p>
+          <p class="others">Cases</p>
+          <p class="others">Deaths</p>
+          <p class="others">Recoveries</p>
+        </div>
+      </div>
+      
+      <div id="chart">
+        <canvas id="myChart"></canvas>
+        <button class="close-chart">Close Chart</button>
+      </div>
+    </div>
+    
+  </body>
+</html>
